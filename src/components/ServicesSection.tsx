@@ -1,8 +1,6 @@
 import React from 'react';
 import { ArrowUpRight } from 'lucide-react';
 
-interface ServicesSectionProps {}
-
 const features = [
   'Conferences & Conventions (1000+)',
   'Music Festivals & Concerts',
@@ -13,7 +11,7 @@ const features = [
   'Global Event Coordination',
 ];
 
-export const ServicesSection: React.FC<ServicesSectionProps> = () => {
+export const ServicesSection: React.FC = () => {
   return (
     <section className="w-full bg-white py-16 sm:py-24 lg:py-32">
       <div className="mx-auto w-full max-w-[1200px] px-6 sm:px-10 lg:px-12">

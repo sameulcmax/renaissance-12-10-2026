@@ -97,7 +97,7 @@ export const Portfolio: React.FC = () => {
                 md:text-[17px]
               "
             >
-              A selection of experiences we've brought to life for brands,
+              A selection of experiences we&apos;ve brought to life for brands,
               organizations, communities, and audiences around the world.
             </p>
           </div>
