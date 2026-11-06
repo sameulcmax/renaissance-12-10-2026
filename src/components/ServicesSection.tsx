@@ -1,59 +1,50 @@
 import React from 'react';
 import { ArrowUpRight } from 'lucide-react';
 
-const features = [
-  'Conferences & Conventions (1000+)',
-  'Music Festivals & Concerts',
-  'Sporting Events & Competitions',
-  'Public Celebrations & Ceremonies',
-  'Multi-Venue Productions',
-  'Live Streaming & Hybrid Events',
-  'Global Event Coordination',
-];
-
 export const ServicesSection: React.FC = () => {
   return (
     <section className="w-full bg-white py-16 sm:py-24 lg:py-32">
       <div className="mx-auto w-full max-w-[1200px] px-6 sm:px-10 lg:px-12">
-        
-        {/* Main Split Layout: items-center ensures the left block is vertically aligned with the right list */}
-        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-16">
-          
-          {/* Left Column: Heading, Description & Button (Span 5) */}
-          <div className="flex flex-col items-start lg:col-span-5">
-            
-            {/* Heading */}
+        <div className="flex justify-center">
+          <div className="w-full max-w-[1100px] text-left">
+            <div className="mb-6 h-px w-24 bg-[#06369c]/30" />
+
+            <p className="mb-5 text-[12px] font-medium uppercase tracking-[0.22em] text-[#06369c]/70">
+              Strategic event production
+            </p>
+
             <h2
               className="
                 mb-6
-                text-[36px]
+                text-[42px]
                 font-normal
-                leading-[1.1]
-                tracking-[-0.02em]
+                leading-[0.98]
+                tracking-[-0.03em]
                 text-[#06369c]
-                sm:text-[42px]
-                lg:text-[48px]
+                sm:text-[52px]
+                lg:text-[72px]
               "
             >
               Large-Scale Events
             </h2>
 
-            {/* Description */}
             <p
               className="
                 mb-8
-                text-[16px]
+                max-w-[980px]
+                text-[17px]
                 font-normal
-                leading-[1.7]
+                leading-[1.9]
                 text-[#315276]
-                sm:text-[18px]
+                sm:text-[20px]
               "
             >
-              Orchestrate complex productions with thousands of attendees. Our expertise in
-              logistics and crowd management ensures flawless execution at any scale.
+              From global conferences and destination experiences to high-profile civic
+              activations, we design and deliver complex events with precision, clarity,
+              and flawless operational control. Every detail is aligned to the audience,
+              the brand, and the goals of the experience.
             </p>
 
-            {/* Button */}
             <a
               href="/services"
               className="
@@ -89,75 +80,7 @@ export const ServicesSection: React.FC = () => {
               />
             </a>
           </div>
-
-          {/* Right Column: Clean List Layout (Span 7) */}
-          <div className="flex flex-col lg:col-span-7">
-            <ul className="divide-y divide-[#e2e8f0]">
-              {features.map((item, index) => (
-                <li
-                  key={index}
-                  className="
-                    group
-                    flex
-                    items-center
-                    justify-between
-                    py-5
-                    first:pt-0
-                    last:pb-0
-                    sm:py-6
-                  "
-                >
-                  <div className="flex items-center gap-4 sm:gap-6">
-                    <span
-                      className="
-                        text-[13px]
-                        font-medium
-                        tracking-wider
-                        text-[#06369c]/60
-                        transition-colors
-                        duration-300
-                        group-hover:text-[#06369c]
-                        sm:text-[14px]
-                      "
-                    >
-                      0{index + 1}
-                    </span>
-                    <span
-                      className="
-                        text-[16px]
-                        font-medium
-                        text-[#29496d]
-                        transition-colors
-                        duration-300
-                        group-hover:text-[#06369c]
-                        sm:text-[18px]
-                      "
-                    >
-                      {item}
-                    </span>
-                  </div>
-                  
-                  <ArrowUpRight
-                    className="
-                      h-5
-                      w-5
-                      text-[#06369c]
-                      opacity-0
-                      transition-all
-                      duration-300
-                      group-hover:translate-x-1
-                      group-hover:-translate-y-1
-                      group-hover:opacity-100
-                    "
-                    strokeWidth={1.6}
-                  />
-                </li>
-              ))}
-            </ul>
-          </div>
-
         </div>
-
       </div>
     </section>
   );

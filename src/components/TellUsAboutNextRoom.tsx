@@ -1,23 +1,29 @@
 
 "use client";
-import { motion } from "motion/react";
-import { SITE } from "@/lib/site";
 
 export function TellUsAboutNextRoom() {
   return (
     <section
       id="contact"
-      className="border-t border-foreground/10 bg-white py-20 sm:py-24 md:py-22"
+      className="relative overflow-hidden border-t border-[#06369c]/10 bg-white py-20 sm:py-24 md:py-28"
     >
-      <div className="mx-auto grid max-w-[1600px] grid-cols-1 gap-12 px-4 sm:px-6 md:grid-cols-12 md:items-end md:gap-10 lg:px-8">
-        {/* LEFT */}
-        <div className="md:col-span-7">
+      <div className="relative mx-auto max-w-[1600px] px-4 sm:px-6 lg:px-8">
+        <h2 className="mt-5 text-[clamp(3.2rem,8vw,8rem)] font-normal leading-[0.94] tracking-[-0.05em] text-[#06369c]">
+          Tell us about
+          <br className="hidden sm:block" />
+          your next event.
+        </h2>
 
-          <h2 className="display-xl mt-5 text-[clamp(2.5rem,8vw,7rem)] leading-[0.95] text-[#06369c]">
-            Tell us about
-            <br className="hidden sm:block" />
-            your next event.
-          </h2>
+        <div className="mt-10 flex w-fit max-w-full items-center gap-3 rounded-[2rem] border border-[#06369c]/15 bg-[#06369c] px-5 py-4 shadow-[0_20px_80px_rgba(15,23,42,0.12)] sm:px-6 sm:py-5">
+          <p className="shrink-0 text-[0.68rem] font-medium uppercase tracking-[0.28em] text-white/70 sm:text-[0.75rem]">
+            Email us
+          </p>
+          <a
+            href="mailto:info@renaissanceevents.com"
+            className="min-w-0 truncate text-base font-medium text-white transition-colors duration-200 hover:text-blue-200 sm:text-lg md:text-xl lg:text-2xl"
+          >
+            info@renaissanceevents.com
+          </a>
         </div>
       </div>
     </section>

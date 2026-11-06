@@ -14,7 +14,7 @@ const portfolioItems: PortfolioItem[] = [
     number: '01',
     title: 'Global Leadership Summit',
     category: 'Conferences & Conventions',
-    image: '/images/2.jpeg',
+    image: '/images/g1.jpeg',
     alt: 'Large-scale corporate conference',
   },
   {
@@ -49,7 +49,7 @@ const portfolioItems: PortfolioItem[] = [
     number: '06',
     title: 'Multi-Venue Production',
     category: 'Special Events',
-    image: '/images/7.png',
+    image: '/images/8.jpeg',
     alt: 'Large multi-venue event production',
   },
 ];

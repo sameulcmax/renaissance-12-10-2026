@@ -1,5 +1,4 @@
 import About from "@/components/About"
-import { Contact } from "@/components/Contact"
 import CopyrightBar from "@/components/CopyrightBar"
 import Header from "@/components/Header"
 import Hero from "@/components/Hero"
@@ -9,13 +8,12 @@ import { TellUsAboutNextRoom } from "@/components/TellUsAboutNextRoom"
 const page = () => {
   return (
     <>
-    <Header />
-    <Hero />
-    <ServicesSection />
-    <About />
-    <TellUsAboutNextRoom />
-    <Contact />
-    <CopyrightBar />
+      <Header />
+      <Hero />
+      <ServicesSection />
+      <About />
+      <TellUsAboutNextRoom />
+      <CopyrightBar />
     </>
   )
 }

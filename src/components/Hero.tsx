@@ -14,10 +14,10 @@ const Hero: React.FC<HeroProps> = ({
       className="
         relative
         w-full
-        h-[540px]
-        sm:h-[600px]
-        md:h-[640px]
-        lg:h-[720px]
+        h-[420px]
+        sm:h-[500px]
+        md:h-[560px]
+        lg:h-[620px]
         overflow-hidden
         bg-black
       "
