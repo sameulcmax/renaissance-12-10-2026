@@ -13,7 +13,6 @@ type SubService = {
 type SimpleNavItem =
     | { name: "HOME"; href: "/" }
     | { name: "ABOUT"; href: "/about" }
-    | { name: "PORTFOLIO"; href: "/portfolio" }
     | { name: "CONTACT"; href: "/contact" };
 
 type ServiceNavItem = {
@@ -31,13 +30,11 @@ const navItems: NavItem[] = [
         name: "SERVICES",
         href: "/services",
         subServices: [
-            { name: "Corporate Events", href: "/" },
-            { name: "Special Celebrations", href: "/" },
-            { name: "Meeting Management", href: "/" },
-            { name: "Destination Events", href: "/" },
+            { name: "Large-Scale Events", href: "/services#large-scale-events" },
+            { name: "Exhibitions and Sponsorships", href: "/services#exhibitions-and-sponsorships" },
+            { name: "Association, Corporate and Non-Profit Events", href: "/services#association-corporate-and-non-profit-events" },
         ],
     },
-    { name: "PORTFOLIO", href: "/portfolio" },
     { name: "CONTACT", href: "/contact" },
 ];
 

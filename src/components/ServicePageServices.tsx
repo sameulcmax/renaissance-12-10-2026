@@ -9,6 +9,7 @@ import {
 } from 'lucide-react';
 
 interface Service {
+  id: string;
   number: string;
   title: string;
   description: string;
@@ -20,47 +21,60 @@ interface Service {
 
 const services: Service[] = [
   {
-    number: '01',
+    id: 'large-scale-events',
+    number: '1',
     title: 'Large-Scale Events',
     description:
       'Orchestrate complex productions with thousands of attendees. Our expertise in logistics and crowd management ensures flawless execution at any scale.',
     features: [
-      'Conferences & Conventions (1000+)',
-      'Multi-Venue Productions',
-      'Global Event Coordination',
-      'Large-Scale Event Logistics',
+      'Conferences & Conventions (2,000+)',
+      'Sporting Events & Galas',
+      'Receptions & After-Parties',
+      'Public Celebrations & Ceremonies',
+      'Multi-Venue Events',
+      'Global Event Management',
+      'Vendor Management (AV, Ground Transportation) and more',
     ],
-    image: '/images/a2.jpeg',
+    image: '/images/d1.jpg',
     imageAlt: 'Large conference hall setup',
     icon: Users,
   },
   {
-    number: '03',
-    title: 'Sporting Events',
+    id: 'exhibitions-and-sponsorships',
+    number: '2',
+    title: 'Exhibitions and Sponsorships',
     description:
-      'Deliver high-energy sporting experiences with precision. From competitions to large public sporting events, every operational detail is carefully coordinated.',
+      'Bring your brand to life through immersive experiences. We create interactive environments that forge emotional connections and drive meaningful engagement.',
     features: [
-      'Sporting Events & Competitions',
-      'Venue Operations',
-      'Athlete & Guest Coordination',
-      'Event Logistics & Management',
+      'Research and Strategy',
+      'Pricing and Packages',
+      'Sponsor Booths and Fulfillment',
+      'Exhibit Sales and Contract Negotiations',
+      'Booth Assignments',
+      'Working with General Services Contractor for Floor Plan',
+      'On-Site Set-up and Execution (Load-In, Load-Out)',
+      'Post-Event Evaluations',
     ],
     image: '/images/b1.jpg',
     imageAlt: 'Large sporting event',
     icon: Trophy,
   },
   {
-    number: '04',
-    title: 'Public Celebrations',
+    id: 'association-corporate-and-non-profit-events',
+    number: '3',
+    title: 'Association, Corporate and Non-Profit Events',
     description:
-      'Create memorable public experiences that bring communities together. We combine creative direction, production expertise, and flawless execution.',
+      'Transform gatherings into memorable experiences. From executive retreats to company-wide celebrations, we create environments that inspire and engage.',
     features: [
-      'Public Celebrations',
-      'Ceremonies & Special Events',
-      'Community Events',
-      'Live Streaming & Hybrid Events',
+      'Executive Summits & Retreats',
+      'Annual Meetings & Conferences',
+      'Product Launches & Reveals',
+      'Award Ceremonies & Galas',
+      'Team Building Experiences',
+      'Incentive Travel Programs',
+      'Corporate Social Responsibility Events',
     ],
-    image: '/images/g1.jpeg',
+    image: '/images/e1.jpg',
     imageAlt: 'Public celebration event',
     icon: Sparkles,
   },
@@ -73,15 +87,14 @@ export const ServicePageServices: React.FC = () => {
       {/* =========================
           SECTION HEADING
       ========================== */}
-      <div className="mx-auto flex w-full max-w-[1480px] flex-col items-center px-6 pb-16 pt-20 text-center sm:px-10 sm:pb-20 sm:pt-18 md:pt-20 lg:pb-22">
+      <div className="mx-auto flex w-full max-w-[1480px] flex-col items-center px-6 pb-8 pt-8 text-center sm:px-10 sm:pb-10 sm:pt-10">
 
         {/* Decorative Line */}
-        <div className="mb-8 h-px w-24 bg-[#06369c]/30 sm:mb-9 sm:w-28" />
+        <div className="mb-4 h-px w-24 bg-[#06369c]/30 sm:mb-5 sm:w-28" />
 
         {/* Heading */}
         <h2
           className="
-            font-serif
             text-[42px]
             font-normal
             leading-[1.05]
@@ -111,8 +124,9 @@ export const ServicePageServices: React.FC = () => {
 
         return (
           <div
+            id={service.id}
             key={service.number}
-            className="mx-auto w-full max-w-[1480px]"
+            className="mx-auto w-full max-w-[1480px] scroll-mt-32"
           >
             <div className="flex flex-col lg:grid lg:grid-cols-2">
 
@@ -161,6 +175,7 @@ export const ServicePageServices: React.FC = () => {
                   flex
                   flex-col
                   items-start
+                  text-left
                   px-6
                   py-10
                   sm:px-10
@@ -171,6 +186,9 @@ export const ServicePageServices: React.FC = () => {
                   lg:pt-0
                   lg:pb-16
                   xl:px-20
+                  lg:justify-start
+                  lg:gap-2
+                  lg:pb-6
                   ${
                     imageLeft
                       ? 'lg:order-2'
@@ -183,12 +201,13 @@ export const ServicePageServices: React.FC = () => {
                 <span
                   className="
                     mb-6
-                    font-serif
                     text-[15px]
                     tracking-[0.15em]
                     text-[#06369c]/60
                     sm:mb-7
                     sm:text-[16px]
+                    lg:mb-2
+                    lg:text-[14px]
                   "
                 >
                   {service.number}
@@ -207,6 +226,9 @@ export const ServicePageServices: React.FC = () => {
                     sm:mb-8
                     sm:h-[57px]
                     sm:w-[57px]
+                    lg:mb-2
+                    lg:h-9
+                    lg:w-9
                   "
                 >
                   <Icon
@@ -216,6 +238,8 @@ export const ServicePageServices: React.FC = () => {
                       text-white
                       sm:h-[27px]
                       sm:w-[27px]
+                      lg:h-5
+                      lg:w-5
                     "
                     strokeWidth={1.6}
                   />
@@ -226,7 +250,6 @@ export const ServicePageServices: React.FC = () => {
                   className="
                     mb-5
                     max-w-[520px]
-                    font-serif
                     text-[34px]
                     font-normal
                     leading-[1.08]
@@ -236,6 +259,8 @@ export const ServicePageServices: React.FC = () => {
                     sm:text-[40px]
                     md:text-[44px]
                     lg:text-[46px]
+                    lg:mb-2
+                    lg:text-[40px]
                   "
                 >
                   {service.title}
@@ -253,13 +278,15 @@ export const ServicePageServices: React.FC = () => {
                     sm:mb-8
                     sm:text-[16px]
                     md:text-[17px]
+                    lg:mb-2
+                    lg:text-[17px]
                   "
                 >
                   {service.description}
                 </p>
 
                 {/* Features */}
-                <ul className="space-y-3 sm:space-y-[13px]">
+                <ul className="space-y-3 sm:space-y-[13px] lg:space-y-1">
                   {service.features.map((feature, featureIndex) => (
                     <li
                       key={featureIndex}
@@ -272,10 +299,12 @@ export const ServicePageServices: React.FC = () => {
                         text-[#29496d]
                         sm:text-[15px]
                         md:text-[16px]
+                        lg:text-[15px]
+                        lg:leading-[1.4]
                       "
                     >
                       <span
-                        className="
+                        className={`
                           mr-3
                           mt-[7px]
                           h-[7px]
@@ -286,7 +315,7 @@ export const ServicePageServices: React.FC = () => {
                           sm:mr-[17px]
                           sm:h-[8px]
                           sm:w-[8px]
-                        "
+                        `}
                       />
 
                       <span>{feature}</span>
@@ -320,6 +349,11 @@ export const ServicePageServices: React.FC = () => {
                     sm:mt-10
                     sm:px-7
                     sm:py-4
+                    lg:mt-3
+                    lg:gap-2
+                    lg:px-4
+                    lg:py-2
+                    lg:text-[11px]
                   "
                 >
                   <span>Explore Service</span>
