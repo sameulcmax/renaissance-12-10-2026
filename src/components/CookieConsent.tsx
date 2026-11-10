@@ -1,27 +1,10 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Cookie } from "lucide-react";
 
-const CONSENT_COOKIE = "renaissance-cookie-consent";
-const CONSENT_MAX_AGE = 60 * 60 * 24 * 180;
-
 export default function CookieConsent() {
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const hasConsent = document.cookie
-      .split("; ")
-      .some((cookie) => cookie.startsWith(`${CONSENT_COOKIE}=`));
-
-    setVisible(!hasConsent);
-  }, []);
-
-  const saveConsent = (choice: "all" | "essential") => {
-    const secure = window.location.protocol === "https:" ? "; Secure" : "";
-    document.cookie = `${CONSENT_COOKIE}=${choice}; Max-Age=${CONSENT_MAX_AGE}; Path=/; SameSite=Lax${secure}`;
-    setVisible(false);
-  };
+  const [visible, setVisible] = useState(true);
 
   if (!visible) return null;
 
@@ -44,14 +27,14 @@ export default function CookieConsent() {
       <div className="mt-4 flex shrink-0 flex-wrap gap-2 sm:mt-0">
         <button
           type="button"
-          onClick={() => saveConsent("essential")}
+          onClick={() => setVisible(false)}
           className="rounded-full border border-white/35 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
         >
           Essential only
         </button>
         <button
           type="button"
-          onClick={() => saveConsent("all")}
+          onClick={() => setVisible(false)}
           className="rounded-full bg-white px-4 py-2 text-sm font-semibold text-[#06369c] transition-colors hover:bg-blue-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
         >
           Accept all
